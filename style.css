@@ -1,16 +1,528 @@
+@charset "UTF-8";
+/*font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif;*/
 header {
-  background-color: gray; }
+  width: 100%;
+  background-color: #333333;
+  font-family: 'Roboto', sans-serif;
+  /*version mobile 375px*/
+}
+
+header nav {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .logo a {
+  text-decoration: none;
+}
+
+header nav .logo a h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 100;
+}
+
+header nav #menu {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  header nav #menu {
+    width: 30%;
+  }
+}
+
+header nav #menu li {
+  list-style: none;
+}
+
+@media only screen and (max-width: 375px) {
   header nav {
-    width: 80%;
+    display: none;
+  }
+}
+
+header .mobile-container {
+  margin: auto;
+  color: white;
+  border-radius: 10px;
+  display: none;
+  /* position: fixed;*/
+  width: 100%;
+}
+
+@media only screen and (max-width: 375px) {
+  header .mobile-container {
+    display: block;
+  }
+}
+
+header .mobile-container .topnav {
+  background-color: #333333;
+  position: relative;
+}
+
+header .mobile-container .topnav .testnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .mobile-container .topnav .testnav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding-left: 5%;
+}
+
+header .mobile-container .topnav .testnav a h1 {
+  font-family: 'Roboto';
+  font-size: 1.5em;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #ff6666;
+}
+
+header .mobile-container .topnav .testnav a.icon {
+  width: 10%;
+  height: 55px;
+  background: black;
+  color: #ff6666;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+header .mobile-container .topnav .testnav a.icon i {
+  position: absolute;
+  top: 30%;
+  font-size: 1.5em;
+}
+
+header .mobile-container .topnav .testnav a:hover {
+  background: #333333;
+  color: #ff6666;
+}
+
+header .mobile-container .topnav .testnav .active {
+  background-color: #333333;
+  color: white;
+}
+
+header .mobile-container .topnav #menu2 {
+  width: 30%;
+  display: none;
+  padding-top: 10%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 70%;
+}
+
+header .mobile-container .topnav #menu2 a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 100;
+  text-decoration: none;
+  line-height: 2em;
+}
+
+footer {
+  width: 100%;
+  background-color: #333333;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  color: #666666;
+  text-align: center;
+}
+
+footer #catch {
+  font-size: 1.5em;
+}
+
+footer #reseaux {
+  width: 25%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 0px;
+  list-style: none;
+}
+
+@media only screen and (max-width: 768px) {
+  footer #reseaux {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  footer #reseaux {
+    width: 90%;
+  }
+}
+
+footer #reseaux li {
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 375px) {
+  footer #reseaux li {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+footer #reseaux #twitter {
+  background-color: #00bbf5;
+  border: 1px solid #00bbf5;
+}
+
+footer #reseaux #rss {
+  background-color: #f6a42b;
+  border: 1px solid #f6a42b;
+}
+
+footer #reseaux #facebook {
+  background-color: #3b5999;
+  border: 1px solid #3b5999;
+}
+
+footer #reseaux #forrst {
+  background-color: #558f5f;
+  border: 1px solid #558f5f;
+}
+
+footer #reseaux #google {
+  background-color: #cc3333;
+  border: 1px solid #cc3333;
+}
+
+footer #reseaux #flickr {
+  background-color: black;
+  border: 1px solid black;
+}
+
+footer #reseaux #dribble {
+  background-color: #f46899;
+  border: 1px solid #f46899;
+}
+
+footer #reseaux #pinterest {
+  background-color: #00bbf5;
+  border: 1px solid #00bbf5;
+}
+
+footer #reseaux a {
+  color: white;
+}
+
+footer #reseaux a i {
+  font-size: 1.7em;
+}
+
+footer p {
+  font-size: 1.3em;
+}
+
+footer #woo {
+  font-size: 0.8em;
+}
+
+@media only screen and (max-width: 375px) {
+  footer #woo {
+    display: none;
+  }
+}
+
+footer #made {
+  font-size: 0.8em;
+}
+
+footer button {
+  background-color: #ff6666;
+  color: #333333;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 1.3em;
+  border: none;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  /* début page 'home'*/
+  /* --début de section 'canon'*/
+  /* ------Slideshow container */
+  /*fin de slideshow*/
+  /* début de section 'duis*/
+  /* fin de section 'duis'*/
+  /* -----début de page Galerie*/
+  /*copie du slideshow 'home'*/
+  /* début de section 'gallery'*/
+}
+
+body .slideshow-container {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  /* Next & previous buttons */
+  /*Position the "preview button" to the left*/
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+}
+
+body .slideshow-container .mySlides {
+  display: none;
+}
+
+body .slideshow-container .mySlides img {
+  border: none;
+}
+
+body .slideshow-container .prev,
+body .slideshow-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .slideshow-container .prev {
+  left: 5%;
+}
+
+body .slideshow-container .next {
+  right: 5%;
+}
+
+body .slideshow-container .prev:hover,
+body .slideshow-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+body #duis {
+  background-color: #ff6666;
+  text-align: center;
+  margin: auto;
+  padding-top: 5%;
+  padding-bottom: 3%;
+}
+
+body #duis img {
+  border: 10px solid #ff9999;
+  border-radius: 50%;
+}
+
+body #duis #duis_sed {
+  width: 40%;
+  padding-top: 2%;
+  margin: auto;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #990000;
+}
+
+@media only screen and (max-width: 375px) {
+  body #duis #duis_sed {
+    width: 90%;
+  }
+}
+
+body #duis #Sean {
+  color: #993333;
+  font-size: 1.2em;
+}
+
+@media only screen and (max-width: 375px) {
+  body #duis #Sean {
+    width: 90%;
     margin: auto;
-    background-color: black;
-    display: flex;
-    justify-content: flex-end; }
-    header nav ul {
-      width: 40%;
-      display: flex;
+    padding-top: 2%;
+  }
+}
+
+body #gallery {
+  background-color: #ff6666;
+  /* The Modal (background) */
+  /* Modal Content (image) */
+  /* Caption of Modal Image */
+  /* Add Animation */
+  /* The Close Button */
+  /* 100% Image Width on Smaller Screens */
+}
+
+body #gallery h2 {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 5%;
+  text-transform: capitalize;
+  font-size: 2.5em;
+}
+
+body #gallery #album {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
       justify-content: space-around;
-      list-style: none; }
-      header nav ul li {
-        color: white; }
+}
+
+body #gallery #album img {
+  width: 22%;
+  height: 22%;
+  padding-bottom: 3%;
+}
+
+body #gallery #myImg:hover {
+  opacity: 0.7;
+}
+
+body #gallery .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+body #gallery .modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+body #gallery #caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+body #gallery .modal-content, body #gallery #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+body #gallery .close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body #gallery .close:hover,
+body #gallery .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  body #gallery .modal-content {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
